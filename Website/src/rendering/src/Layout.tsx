@@ -37,19 +37,10 @@ const Layout = ({ sitecoreContext, sitecoreContext: { route } }: LayoutProps): J
       : '';
   // END CUSTOMIZATION
 
-  // DEMO TEAM CUSTOMIZATION - Use event name from context as the page title
-  const contextTitle = sitecoreContext['EventInfo'] as NodeJS.Dict<string | string>;
-  let pageTitle = contextTitle.titlePrefix;
-  if (route?.fields?.pageTitle?.value) {
-    pageTitle += ' - ' + route?.fields?.pageTitle?.value;
-  }
-  // END CUSTOMIZATION
-
   return (
     <>
       <Head>
         {/* DEMO TEAM CUSTOMIZATION - Use event name from context as the page title */}
-        <title>{pageTitle}</title>
         <link rel="icon" href={`${publicUrl}/favicon.ico`} />
       </Head>
 
